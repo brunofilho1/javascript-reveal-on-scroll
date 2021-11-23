@@ -11,11 +11,16 @@ body {
     background: #1D212B;
 }
 
+.content {
+    width: 1200px;
+}
+
 section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 section:nth-child(1) {
@@ -37,8 +42,36 @@ section .container {
     margin: 100px;
 }
 
+.container h2 {
+    margin-bottom: 50px;
+}
+
+.container .cards {
+    display: flex;
+    gap: 30px;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+
+#header p {
+    background: #191d25;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
 section h1 {
-    font-size: 60px;
+    text-align: left;
+    font-size: 40px;
+    background: #191d25;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 section h2 {
@@ -52,7 +85,7 @@ section .cards {
 }
 
 section .cards .text-card {
-    background: #6cbaf5;
+    background: #91bddf;
     margin: 20px;
     padding: 50px;
 
@@ -68,6 +101,7 @@ section .cards .text-card h3 {
 @media (max-width: 900px) {
     section h1 {
         font-size: 40px;
+        text-align: left;
     }
 
     section .cards {
@@ -77,13 +111,20 @@ section .cards .text-card h3 {
 
 .reveal {
     position: relative;
-    transform: translateX(150px);
+    transform: translateY(250px);
     opacity: 0;
 
     transition: all 2s ease;
 }
 
+.reveal iframe {
+    width: 850px;
+    height: 500px;
+
+    border-radius: 10px;
+}
+
 .reveal.active {
-    transform: translateX(0px);
+    transform: translateY(0px);
     opacity: 1;
 }
